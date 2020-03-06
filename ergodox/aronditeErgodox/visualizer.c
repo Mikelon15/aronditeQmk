@@ -19,7 +19,6 @@
 #include "lcd_backlight_keyframes.h"
 
 enum ergodox_layers {
-  _COL,
   _QWR,
   _SYM,
   _NAV,
@@ -38,11 +37,6 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
     lcd_backlight_brightness(255);
 
     switch(layer){
-        case _COL:
-          state->layer_text = "Colmak";
-          state->target_lcd_color = LCD_COLOR(0, saturation, 0);
-          break;
-
         case _QWR:
           state->layer_text = "QWERTY";
           state->target_lcd_color = LCD_COLOR(35, 200, brightness);
